@@ -1,0 +1,25 @@
+<ion-content class="ion-padding" >
+      <ion-grid fixed>
+      <ion-row>
+        <ion-col size='12'>
+            <ion-item>
+              <ion-avatar class="small-avatar" slot="start">
+                <img src="/assets/andrey.jpg">
+              </ion-avatar>
+              <ion-label text-center>{{title | titlecase | uppercase}}</ion-label>
+            </ion-item>
+          </ion-col>
+        <ion-col size='12' size-md='6' *ngFor="let skill of globalService['skills']">
+          <div 
+            [appChart]="skill['appChart']" 
+            [data]="skill['data']" 
+            [text]="skill['text']" 
+            [itemId]= "skill['id']" 
+            class='canvas-js'
+          >
+            <canvas  id="{{skill['id']}}"></canvas>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

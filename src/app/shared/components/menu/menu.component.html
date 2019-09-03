@@ -1,0 +1,15 @@
+<ion-menu side="start" contentId="content" type="push">
+  <ion-header>
+    <ion-toolbar translucent color="dark">
+      <ion-title>CV Sections</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list *ngFor="let menuItem of globalService['menuItems']">
+      <ion-item class="cursor-pointer" (click)="setRoute(menuItem.link)">
+        <ion-icon name={{menuItem.icon}} slot="start"></ion-icon>
+        <ion-label>{{menuItem.label}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

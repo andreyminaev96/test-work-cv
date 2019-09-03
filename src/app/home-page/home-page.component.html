@@ -1,0 +1,22 @@
+<ion-content class="ion-padding">
+  <ion-grid fixed>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12">
+      <ion-row class="ion-justify-content-center avatar-container">
+          <ion-avatar class='avatar-img'>
+            <img [src]='imgUrl'>
+          </ion-avatar>
+      </ion-row>
+    </ion-col>
+    <ion-col size="12">
+      <ion-row class="ion-justify-content-end">
+        <div class="buttons-groupe">
+          <ion-buttons slot="primary" *ngFor="let button of buttonItems">
+            <ion-button size="large" routerLink="{{button['name']}}" color="dark">{{button['name']}}</ion-button>
+          </ion-buttons>
+        </div>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
